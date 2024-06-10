@@ -39,7 +39,7 @@ export async function ambilDaftarAbsensi() {
       nis: dok.data().nis,
       nama: dok.data().nama,
       alamat: dok.data().alamat,
-      noTlpn: dok.data().noTlpn,
+      notlpnlpn: dok.data().notlpn,
       kelas: dok.data().kelas,
       keterangan: dok.data().keterangan,
       
@@ -55,14 +55,14 @@ export function formatAngka(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 
-export async function tambahAbsensi(tanggal, nis, nama, alamat, noTlpn, kelas, keterangan) {
+export async function tambahAbsensi(tanggal, nis, nama, alamat, notlpn, kelas, keterangan) {
   try {
     const dokRef = await addDoc(collection(db, 'absensi'), {
       tanggal: tanggal,
       nis: nis,
       nama: nama,
       alamat: alamat,
-      noTlpn: noTlpn,
+      notlpnn: notlpn,
       kelas: kelas,
       keterangan: keterangan
     });
@@ -76,11 +76,11 @@ export async function hapusAbsensi(docId) {
   await deleteDoc(doc(db, "absensi", docId));
 }
 
-export async function ubahPembeli(docId, nama, alamat, noTlpn) {
+export async function ubahPembeli(docId, nama, alamat, notlpn) {
   await updateDoc(doc(db, "pembeli", docId), {
     nama: nama,
     alamat: alamat,
-    noTlpn: noTlpn
+    notlpn: notlpn
   });
 }
 

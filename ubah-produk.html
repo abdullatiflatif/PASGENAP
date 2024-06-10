@@ -26,7 +26,7 @@
     </div>
     <div class="mb-3">
       <label class="form-label">no telpon</label>
-      <input type="text" class="form-control" id="input-noTlpn">
+      <input type="text" class="form-control" id="input-notlpn">
     </div>
     <button type="submit" class="btn btn-primary" id="tombol-ubah">Ubah</button>
   </form>
@@ -41,7 +41,7 @@
     let tombolUbah = document.getElementById('tombol-ubah');
     let elemenNamaPembeli = document.getElementById('input-nama');
     let elemenAlamat = document.getElementById('input-alamat');
-    let elemenNoTlpn = document.getElementById('input-noTlpn');
+    let elemenNoTlpn = document.getElementById('input-notlpn');
     const queryString = window.location.search
     const parameterURL = new URLSearchParams(queryString);
     const docId = parameterURL.get('docId')
