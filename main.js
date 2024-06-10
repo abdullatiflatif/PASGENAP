@@ -88,5 +88,5 @@ export async function ambilPembeli(docId) {
   const docRef = await doc(db, "pembeli", docId);
   const docSnap = await getDoc(docRef);
 
-  return await docSnap.data();
+  return await docSnap.data(); 
 }
