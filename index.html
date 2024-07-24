@@ -15,7 +15,7 @@
 <body class="m-3">
   <h1>Absesi_Siswa</h1>
 
-  <table class="table" id="Absesi_Siswa">
+  <table class="table" id="absensi-siswa">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -75,7 +75,7 @@
     import { ambilDaftarAbsensi, formatAngka, hapusAbsensi } from './main.js';
 
     $(document).ready(async function() {
-      let elemenDaftar = $("#-absensi_siswa > tbody");
+      let elemenDaftar = $("#absensi-siswa > tbody");
       let daftarAbsensi = await ambilDaftarAbsensi();
       let nomor = 1;
 
