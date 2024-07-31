@@ -15,7 +15,7 @@
 <body class="m-4">
   <h1>Ubah Data </h1>
 
-<form class="mb-3">
+  <form class="mb-3">
     <div class="mb-3">
       <div class="mb-3">
         <label class="form-label">Tangal</label>
@@ -51,7 +51,7 @@
   </form>
 
   <script type="module">
-    import {ambilAbsensi, ubahAbsensi} from './main.js';
+    import { ambilAbsensi, ubahAbsensi } from './main.js';
 
     let tombolUbah = document.getElementById('tombol-ubah');
     let elemenTanggal = document.getElementById('input-tanggal');
@@ -77,20 +77,17 @@
 
     tombolUbah.addEventListener('click', async function(el) {
       el.preventDefault();
-      await ubahPembeli(docId, elemenNamaPembeli.value, elemenAlamat.value, elemenNoTlpn.value);
+      await ubahAbsensi(docId, elemenTanggal.value, elemenNis.value, elemenNama.value, elemenAlamat.value, elemenNoTlpn.value, elemenKelas.value, elemenKeterangan.value);
       window.location.href = 'index.html';
     });
-    
-     
-  
   </script>
-  
+
   <footer class="py-3 bg-dark-subtle mt-auto">
-  <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">daftar absensi</a></li>
-  </ul>
-  <p class="text-center text-body-secondary">&copy; 2024 ABSEN SISWA</p>
-  
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">daftar absensi</a></li>
+    </ul>
+    <p class="text-center text-body-secondary">&copy; 2024 ABSEN SISWA</p>
+
   </footer>
 </body>
 

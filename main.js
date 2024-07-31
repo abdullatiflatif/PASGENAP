@@ -43,7 +43,7 @@ export async function ambilDaftarAbsensi() {
       notlpn: dok.data().notlpn,
       kelas: dok.data().kelas,
       keterangan: dok.data().keterangan,
-      
+
     });
   });
 
@@ -77,11 +77,15 @@ export async function hapusAbsensi(docId) {
   await deleteDoc(doc(db, "absensi_siswa", docId));
 }
 
-export async function ubahAbsensi(docId, nama, alamat, noTlpn) {
+export async function ubahAbsensi(docId, tanggal, nis, nama, alamat, notlpn, kelas, keterangan) {
   await updateDoc(doc(db, "absensi_siswa", docId), {
+    tanggal: tanggal,
+    nis: nis,
     nama: nama,
     alamat: alamat,
-    notlpn: notlpn
+    notlpn: notlpn,
+    kelas: kelas,
+    keterangan: keterangan,
   });
 }
 
