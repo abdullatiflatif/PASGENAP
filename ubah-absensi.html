@@ -32,7 +32,7 @@
   </form>
 
 <div class="d-flex justify-content-center">
-  <button onclick="location.href='index.html'" style="background-color: blue; color: white; border-radius: 10px;">lihat data penjual</button>
+  <button onclick="location.href='index.html'" style="background-color: blue; color: white; border-radius: 10px;">data absen</button>
 </div>
 
   <script type="module">
@@ -47,9 +47,13 @@
     const docId = parameterURL.get('docId')
     const pembeli = await ambilPembeli(docId);
 
-    elemenNamaPembeli.value = pembeli.nama;
-    elemenAlamat.value = pembeli.alamat;
-    elemenNoTlpn.value = pembeli.noTlpn;
+    elemenNamaSiswa.value = absensi.nama;
+    elemenTanggal.value = absensi.alamat;
+    elemenNis.value = absensi.noTlpn;
+    elemenAlamat.value = absensi.nis;
+    elemenNotlpon.value = absensi.alamat;
+    elemenKelas.value = absensi.notlpon
+    elemenKeterangan = absensi.keterangan;
 
 
     tombolUbah.addEventListener('click', async function(el) {
