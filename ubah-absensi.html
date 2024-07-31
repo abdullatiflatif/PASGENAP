@@ -38,10 +38,14 @@
   <script type="module">
     import { ambilPembeli, ubahPembeli } from './main.js';
 
-    let tombolUbah = document.getElementById('tombol-ubah');
-    let elemenNamaPembeli = document.getElementById('input-nama');
+    let tombolTambah = document.getElementById('tombol-tambah');
+    let elemenTanggal = document.getElementById('input-tanggal');
+    let elemenNis = document.getElementById('input-nis');
+    let elemenNama = document.getElementById('input-nama');
     let elemenAlamat = document.getElementById('input-alamat');
     let elemenNoTlpn = document.getElementById('input-notlpn');
+    let elemenKelas = document.getElementById('input-kelas');
+    let elemenKeterangan = document.getElementById('input-keterangan')
     const queryString = window.location.search
     const parameterURL = new URLSearchParams(queryString);
     const docId = parameterURL.get('docId')
