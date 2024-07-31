@@ -51,7 +51,7 @@
   </form>
 
   <script type="module">
-    import { ambilPembeli, ubahPembeli } from './main.js';
+    import { ubahabsensi, ambilabsensi } from './main.js';
 
     let tombolTambah = document.getElementById('tombol-tambah');
     let elemenTanggal = document.getElementById('input-tanggal');
@@ -66,12 +66,12 @@
     const docId = parameterURL.get('docId')
     const pembeli = await ambilPembeli(docId);
 
-    elemenNamaSiswa.value = absensi.nama;
-    elemenTanggal.value = absensi.alamat;
-    elemenNis.value = absensi.noTlpn;
-    elemenAlamat.value = absensi.nis;
+    elemenNama.value = absensi.nama;
+    elemenTanggal.value = absensi.tanggal;
+    elemenNis.value = absensi.nis;
+    elemenAlamat.value = absensi.alamat;
     elemenNotlpon.value = absensi.alamat;
-    elemenKelas.value = absensi.notlpon
+    elemenNoTlpn.value = absensi.notlpn;
     elemenKeterangan = absensi.keterangan;
 
 
