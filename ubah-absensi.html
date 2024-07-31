@@ -64,14 +64,14 @@
     const queryString = window.location.search
     const parameterURL = new URLSearchParams(queryString);
     const docId = parameterURL.get('docId')
-    const pembeli = await ambilPembeli(docId);
+    const absensi = await ambilAbsensi(docId);
 
-    elemenNama.value = absensi.nama;
     elemenTanggal.value = absensi.tanggal;
     elemenNis.value = absensi.nis;
+    elemenNama.value = absensi.nama;
     elemenAlamat.value = absensi.alamat;
-    elemenNotlpon.value = absensi.alamat;
     elemenNoTlpn.value = absensi.notlpn;
+    elemenKelas .value = absensi.kelas;
     elemenKeterangan = absensi.keterangan;
 
 
