@@ -78,7 +78,7 @@ export async function hapusAbsensi(docId) {
 }
 
 export async function ubahAbsensi(docId, nama, alamat, noTlpn) {
-  await updateDoc(doc(db, "absensi", docId), {
+  await updateDoc(doc(db, "absensi_siswa", docId), {
     nama: nama,
     alamat: alamat,
     notlpn: notlpn
@@ -86,7 +86,7 @@ export async function ubahAbsensi(docId, nama, alamat, noTlpn) {
 }
 
 export async function ambilAbsensi(docId) {
-  const docRef = await doc(db, "absensi", docId);
+  const docRef = await doc(db, "absensi_siswa", docId);
   const docSnap = await getDoc(docRef);
 
   return await docSnap.data();
