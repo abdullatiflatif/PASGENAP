@@ -77,16 +77,16 @@ export async function hapusAbsensi(docId) {
   await deleteDoc(doc(db, "absensi_siswa", docId));
 }
 
-export async function ubahPembeli(docId, nama, alamat, noTlpn) {
-  await updateDoc(doc(db, "pembeli", docId), {
+export async function ubahAbsensi(docId, nama, alamat, noTlpn) {
+  await updateDoc(doc(db, "absensi", docId), {
     nama: nama,
     alamat: alamat,
     notlpn: notlpn
   });
 }
 
-export async function ambilPembeli(docId) {
-  const docRef = await doc(db, "pembeli", docId);
+export async function ambilAbsensi(docId) {
+  const docRef = await doc(db, "absensi", docId);
   const docSnap = await getDoc(docRef);
 
   return await docSnap.data();
